@@ -10,7 +10,7 @@ Try every question on your own first — the Answer Key is at the bottom, no pee
 
 **1.** (Multiple Choice) Which keyword defines a function in Python?
 A) `func`  B) `def`  C) `function`  D) `define`
-
+answer: B
 **2.** (Code Tracing) What prints?
 ```python
 def add(a, b):
@@ -19,7 +19,7 @@ def add(a, b):
 x = add(2, 3)
 print(x)
 ```
-
+answer: 5
 **3.** (Code Tracing) What prints — both lines?
 ```python
 def show(a, b):
@@ -28,9 +28,11 @@ def show(a, b):
 x = show(2, 3)
 print(x)
 ```
-
+answer:
+5
+None
 **4.** (Short Answer) What's the difference between a function that uses `return` and one that only uses `print()`?
-
+answer: 'return' do the calculation inside the function and then prints the value. However, 'print()' just print out the statement.
 **5.** (Code Tracing) What prints?
 ```python
 def stats(nums):
@@ -39,9 +41,9 @@ def stats(nums):
 lo, hi = stats([3, 9, 1])
 print(hi)
 ```
-
+answer: 9
 **6.** (True/False) A variable created inside a function is accessible outside of it after the function finishes running.
-
+False
 **7.** (Code Tracing) What prints?
 ```python
 def greet(name, greeting='Hi'):
@@ -49,7 +51,7 @@ def greet(name, greeting='Hi'):
 
 print(greet('Ada'))
 ```
-
+Hi, Ada
 ---
 
 ## Section B — Flexible Arguments
@@ -61,14 +63,14 @@ def total(*args):
 
 print(total(1, 2, 3, 4))
 ```
-
+answer: 10
 **9.** (Short Answer) Inside a function defined with `*args`, what data type is `args`?
-
+answer: Inside a function defined with *args, args is a tuple.
 **10.** (Short Answer) Inside a function defined with `**kwargs`, what data type is `kwargs`?
-
+answer: Inside a function defined with *kargs, kargs is a dictionary.
 **11.** (Multiple Choice) Which parameter order is correct when a function uses all three kinds?
 A) `**kwargs, *args, regular`  B) `regular, *args, **kwargs`  C) `*args, regular, **kwargs`  D) Any order works
-
+answer: B
 **12.** (Code Tracing) What prints?
 ```python
 def f(a, *b, **c):
@@ -76,11 +78,11 @@ def f(a, *b, **c):
 
 f(1, 2, 3, x=4)
 ```
-
+answer: 1 (2, 3) {'x': 4}
 **13.** (Short Answer) `introduce('Ada', 28)` and `introduce(age=28, name='Ada')` can call the exact same function and produce the same result. What's the difference between these two calls?
 
 ---
-
+Both of them do the same thing. But `introduce('Ada', 28)` does it as positional argument and `introduce(age=28, name='Ada')` does it as keyword argument which can be given in any order.
 ## Section C — Type-Based Behavior
 
 **14.** (Code Tracing) What prints?
@@ -90,14 +92,14 @@ def double(x):
 
 print(double('ab'))
 ```
-
+answer: abab
 **15.** (Short Answer) Why doesn't Python support true function overloading the way C++ does (multiple `def`s with the same name but different parameter types)?
 
 **16.** (Multiple Choice) Which is generally the better way to check a value's type inside a function, and why?
 A) `type(x) == int`  B) `isinstance(x, int)`
 
 **17.** (Short Answer) What is "duck typing," and what phrase is it named after?
-
+answer: Python doesn't support true function overloading because each function name refers to a single function object, and a later def with the same name replaces the earlier one. Instead, Python uses flexible argument handling (*args, **kwargs, defaults, etc.) to achieve similar behavior.
 **18.** (Code Tracing) What prints?
 ```python
 def get_len(x):
@@ -108,15 +110,15 @@ def get_len(x):
 
 print(get_len(5))
 ```
-
+prints: no length
 **19.** (Short Answer) Explain how branching on `isinstance()` inside a function is the "same idea" as `dictionary.get(key, default)`.
 
 ---
-
+answer: Both isinstance() branching and dict.get(key, default) check a condition and choose between two paths. If the condition is True, they use the specific behavior; otherwise they use a fallback/default behavior. This helps make the program more robust and avoid errors.
 ## Section D — Going Further (Bonus)
 
 **20.** (Short Answer) Why is `def add_item(item, cart=[]):` risky if the function appends to `cart` and returns it?
-
+answer: The default argument cart=[] is a mutable object (a list). So when you append to it, you're changing that one shared list.
 **21.** (Code Tracing) What prints?
 ```python
 def add3(a, b, c):
@@ -125,11 +127,12 @@ def add3(a, b, c):
 nums = [1, 2, 3]
 print(add3(*nums))
 ```
-
+answer: 6
 **22.** (Short Answer) What's the difference between `*args` appearing in a function's `def` line versus `*nums` appearing in a function *call*?
 
 ---
-
+answer: def func(*args): → packs arguments into a tuple.
+func(*nums) → unpacks an iterable into separate arguments.
 ## ✅ Answer Key
 
 1. **B** — `def`.

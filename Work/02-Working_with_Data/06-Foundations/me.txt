@@ -1,0 +1,2 @@
+This is my text file.
+I am learning to work with files in Python.
