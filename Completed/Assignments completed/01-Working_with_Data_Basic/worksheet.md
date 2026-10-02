@@ -34,14 +34,6 @@ print(nums)
 # Add another food to the list.
 # Remove one item and print the list.
 ```
-
-### ✏️ Task: Slicing and Sorting
-
-```python
-# Given: numbers = [42, 17, 8, 99, 23, 4]
-# 1. Print the first three numbers using slicing.
-# 2. Print the numbers sorted from smallest to largest.
-# 3. Print the numbers sorted from largest to smallest.
 ```Python
 # Create a list of top 3 favorite foods
 foods = ["Pizza", "Macroons", "Biryani"]
@@ -54,7 +46,29 @@ foods.remove("Pizza")
 
 # Print the final list
 print(foods)
-```
+# prints out: ['Biryani', 'Pizza', 'Pizza']
+### ✏️ Task: Slicing and Sorting
+
+```python
+# Given: numbers = [42, 17, 8, 99, 23, 4]
+# 1. Print the first three numbers using slicing.
+# 2. Print the numbers sorted from smallest to largest.
+# 3. Print the numbers sorted from largest to smallest.
+
+```numbers = [42, 17, 8, 99, 23, 4]
+
+# 1. Print the first three numbers using slicing.
+print(numbers[:3])
+
+# 2. Print the numbers sorted from smallest to largest.
+print(sorted(numbers))
+
+# 3. Print the numbers sorted from largest to smallest.
+print(sorted(numbers, reverse=True))
+
+[42, 17, 8]
+[4, 8, 17, 23, 42, 99]
+[99, 42, 23, 17, 8, 4]
 ### ✏️ Task: Filtering
 
 ```python

@@ -61,9 +61,7 @@ scores = (100, 90, 80, 70)
 first, *rest = scores
 print(rest)
 ```
-Answer: scores = (100, 90, 80, 70)
-first, *rest = scores
-print(rest)
+Answer:[90, 80, 70]
 **12.** (Short Answer) When a function is defined with `def total(*args):`, what type of object is `args` inside the function?
 
 ---
