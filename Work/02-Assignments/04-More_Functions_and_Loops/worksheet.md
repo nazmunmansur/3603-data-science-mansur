@@ -13,14 +13,15 @@ def price(amount, tax=0.0825, discount=0):
 
 What does each call return?
 
-1. `price(100)` → ____________________________
-2. `price(100, discount=10)` → ____________________________
-3. `price(100, 0)` → ____________________________
-4. `price(discount=5, amount=20)` → ____________________________
+1. `price(100)` → ________108.25____________________
+2. `price(100, discount=10)` → __98.25__________________________
+3. `price(100, 0)` → ___100_________________________
+4. `price(discount=5, amount=20)` → ___16.65_________________________
 
 > 🤖 **Explain It:** Why are keyword arguments easier to read than positional ones in a call like `price(100, 0, 10)`?
 
----
+--- 
+```Keyword arguments are easier to read because they label each value with its parameter name, making the call more self-explanatory. ```
 
 ## 🧠 Section 2: Scope
 
@@ -37,11 +38,12 @@ result = add_one(count)
 print(count, result)
 ```
 
-`Answer:` ____________________________
+`Answer:` 0 1
 
 > 🤖 **Explain It:** Describe the "room with two doors" model of a function in your own words.
 
 ---
+```A function is like a room with an input door and an output door. Data goes into the function through its parameters, the function does some work inside the room, and the result comes out through the return statement.```
 
 ## 🧠 Section 3: Trace a While Loop
 
@@ -55,15 +57,15 @@ while balance < 150:
 
 | pass | `balance` at the start | `balance < 150`? | `balance` after | `years` after |
 |------|------------------------|------------------|-----------------|---------------|
-| 1 | 100 | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | 100 | True| 120| 1|
+| 2 | 120| True| 140| 2|
+| 3 | 140| True| 160| 3|
+| 4 | 160| False| Stop| none|
 
-Final `years`: ____________  Final `balance`: ____________
+Final `years`: ___3_________  Final `balance`: ____160________
 
 What single change would make this an **infinite** loop?  
-`Answer:` ____________________________
+`Answer:` while balance != 150:
 
 ---
 
@@ -71,10 +73,10 @@ What single change would make this an **infinite** loop?
 
 | Task | `for` or `while`? | Why? |
 |------|-------------------|------|
-| Print each line of a file | | |
-| Keep asking for a password until it's correct | | |
-| Find the average of a list of prices | | |
-| Double a number until it's over one million | | |
+| Print each line of a file | for| iterating each line of a file|
+| Keep asking for a password until it's correct | while| condition is correct password to stop the loop|
+| Find the average of a list of prices | for | itersting over the list of prices no condiotion added |
+| Double a number until it's over one million | while| there is a codition to stop the loop|
 
 ---
 
@@ -90,10 +92,15 @@ Rex,dog
 Tom,cat
 ```
 
-1. How many times does `for line in f:` run? ____________
+1. How many times does `for line in f:` run? ______4______
 2. Which lines should your code skip, and how would you detect each one?  
-   `Answer:` ____________________________
+   `Answer:` ____Skip the header (name,species) and any line starting with #_______________________
 3. Write the list of dictionaries a `read_pets` function should return:  
-   `Answer:` ____________________________
+   `Answer:` __[
+    {"name": "Rex", "species": "dog"},
+    {"name": "Tom", "species": "cat"}
+]
+```_```_____________________
 
 > 🤖 **Explain It:** When is `try` / `except` a good idea, and when does it just hide bugs?
+try/except is a good idea when you expect an error that could reasonably happen, such as a user entering invalid input or a file not existing. It prevents the program from crashing and lets you handle the problem gracefully.  
