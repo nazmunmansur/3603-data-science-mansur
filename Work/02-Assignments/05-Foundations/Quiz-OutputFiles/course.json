@@ -1,0 +1,10 @@
+{
+  "name": "Introduction to Python",
+  "credits": 3,
+  "topics": [
+    "Variables",
+    "Loops",
+    "Functions",
+    "File Handling"
+  ]
+}
