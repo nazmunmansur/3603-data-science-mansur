@@ -1,0 +1,4 @@
+Hello, Jupyter!
+This is a text file. 🐍
+I want to add some details in this file about codes definition
+I want to add some details in this file about codes definition

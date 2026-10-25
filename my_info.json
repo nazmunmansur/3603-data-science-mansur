@@ -1,1 +1,13 @@
-{"name": "Nazmun", "major": "Data Analytics", "hobbies": ["reading", "coding", "traveling"]}
+{
+  "name": "Nancy",
+  "major": "Data Analytics",
+  "hobbies": [
+    "reading",
+    "coding",
+    "traveling"
+  ],
+  "location": [
+    33.9,
+    -98.5
+  ]
+}

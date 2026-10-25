@@ -1,0 +1,9 @@
+{
+  "name": "Nancy",
+  "type": "student",
+  "courses": [
+    "Business Statistics",
+    "Data Science",
+    "Data Visualization"
+  ]
+}

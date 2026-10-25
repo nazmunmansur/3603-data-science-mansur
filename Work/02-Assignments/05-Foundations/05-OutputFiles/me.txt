@@ -1,0 +1,2 @@
+I am learning to work with files in Python
+ It is interesting and fun!
